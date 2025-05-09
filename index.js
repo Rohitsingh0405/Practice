@@ -85,4 +85,6 @@
 const http = require('http')
 http.createServer(function(req,res){
     res.write("hello world")
-})
+    res.write(req.url)
+    res.end()
+}).listen(8080)
